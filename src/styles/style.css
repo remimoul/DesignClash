@@ -1,0 +1,387 @@
+@font-face {
+  font-family: 'Koulen';
+  src: url('../assets/fonts/Koulen-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Krub';
+  src: url('../assets/fonts/Krub-Regular.ttf') format('truetype');
+}
+
+html {
+  height: 100%;
+  border: 17px solid black;
+    background: #18FFC7;
+    overflow: hidden;
+  }
+  
+
+  /* Style pour les écrans de taille moyenne (tablette) */
+@media only screen and (max-width: 768px) {
+    
+  .TitleGame {
+
+position: absolute;
+width: 197px;
+height: 112px;
+left: 94px;
+top: 283px;
+
+font-family: 'Koulen';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 87px;
+
+color: #000000;
+
+
+  }
+
+  .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 100px;
+      height: 175px;
+      left: 130px;
+      top: 306px;
+    
+  }
+
+  .buttonStart {
+    margin-top: 15px; /* Cela ajoute une marge de 10px en haut et en bas de chaque bouton */
+    width: 181px;
+    height: 43px;
+    background: #000000;
+    border-radius: 33px;
+    font-family: 'Koulen';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 44px;
+letter-spacing: 0.24em;
+color: #FFFFFF;
+  }
+
+
+.buttonClass {
+
+
+box-sizing: border-box;
+
+position: absolute;
+width: 129px;
+height: 31px;
+
+top:125px;
+
+background: #FFFFFF;
+border: 2px solid #FBBD0D;
+border-radius: 33px;
+transform: rotate(-9.7deg);
+
+}
+
+
+
+
+  .buttonRules {
+    /* Rectangle 8 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 109.87px;
+height: 31px;
+top: 163px;
+
+background: #FFFFFF;
+border: 2px solid #FBBD0D;
+border-radius: 33px;
+transform: rotate(-9.44deg);
+
+  }
+
+.addPlayer {
+
+position: absolute;
+width: 65%;
+height: 5%;
+left: 15%;
+background: #FFFFFF;
+border: 2px solid #FBBD0D;
+border-radius: 10px;
+padding-left: 1rem;
+}
+
+.plusPlayer {
+
+
+box-sizing: border-box;
+
+position: absolute;
+width: 40px;
+height: 24px;
+left: calc(50% - 37px/2 - 86px);
+top: 420px;
+
+background: #FBBD0D;
+border: 2px solid #FFFFFF;
+border-radius: 20px;
+
+}
+
+.startGame {
+  /* Rectangle 11 */
+
+position: absolute;
+width: 124px;
+height: 34px;
+left: calc(50% - 124px/2 + 42.5px);
+top: 463px;
+
+background: #000000;
+border-radius: 35px;
+/* start */
+
+
+font-family: 'Koulen';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 36px;
+letter-spacing: 0.24em;
+
+color: #FFFFFF;
+
+
+  }
+
+  .tableHome{
+    background: url("../assets/image/01.png");
+    position: absolute;
+    bottom: -60px;
+    left: -51px;
+    width: 230px;
+height: 250px;
+transform: rotate(-32.51deg);
+flex-shrink: 0;
+    background-size: cover; /* Cela garantit que l'image couvre toute la zone */
+    background-repeat: no-repeat; /* Cela empêche l'image de se répéter */
+    
+ 
+  }
+
+  .thinkHome{
+    background: url("../assets/image/thinkacc.svg");
+    position: absolute;
+    top: 0; /* Positionne l'élément en haut */
+    right: 0; /* Positionne l'élément à droite */
+    width: 169.875px;
+    height: 169.971px;
+    transform: rotate(0.232deg);
+    flex-shrink: 0;
+    background-size: cover; /* Cela garantit que l'image couvre toute la zone */
+    background-repeat: no-repeat; /* Cela empêche l'image de se répéter */
+  }
+  
+  .objectHome{
+    background: url("../assets/image/Objects.svg");
+    position: absolute;
+    bottom: -145px;
+    left: -92px;
+    width: 223px;
+height: 266px;
+
+}
+
+.addOnePlayer{
+  border-radius: 10px;
+border: 2px solid #FBBD0D;
+background: #FFF;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+width: 209px;
+height: 34px;
+flex-shrink: 0;
+margin: 3px 0;
+padding-left: 1rem ;
+}
+
+.addPlayerTitle {
+  color: #000;
+font-family: 'Koulen';
+font-size: 24px;
+font-weight: 400;
+line-height: 241.187%; /* 57.885px */
+text-align: center;
+margin-top: 25%;
+
+}
+
+.containerPlayer {
+    margin-top: 18%;
+    margin-left: 5%;
+    list-style-type: none;
+  
+}
+
+.titleAdd {
+    color: #000;
+    font-family: Krub;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: 37%;
+   display: flex;
+   margin-top: -9%;
+  
+}
+
+
+
+.Player {
+
+  border-radius: 6px;
+border: 1px solid #000;
+background: #FFF;
+/* width: 65%; */
+margin: 14px auto;
+flex-shrink: 0;
+}
+
+.namePlayerInput {
+  
+    border-radius: 15px;
+    background: #FBBD0D;
+    width: 12vh;
+    
+    position: absolute;
+    margin-top: -12px;
+    font-family: 'Krub';
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 241.187%;
+    margin-left: 2%;
+    text-align: center;
+  
+  
+}
+
+.rank {
+  background-color: yellow; /* Set the background color to yellow */
+  border-radius: 50%; /* Make the span a circle */
+  width: 50px; /* Set the width of the circle */
+  height: 50px; /* Set the height of the circle */
+  display: inline-flex; /* Use flexbox to center the text */
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+  color: black; /* Set the text color to black */
+  font-weight: bold; /* Make the text bold */
+}
+
+.PlayerRank {
+  width: 100%;
+  height: 5vh;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 10px 0;
+
+  display: inline-flex; /* Use flexbox to center the text */
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+ 
+
+  font-size: 1.2em; /* Increase the font size */
+}
+
+.scorePlayer{
+  color: #000;
+font-family: Krub;
+font-size: 12px;
+font-style: normal;
+font-weight: 700;
+line-height: 241.187%; /* 28.942px */
+text-align: center;
+height: 22px;
+
+}
+
+.star{
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 4px;
+  width: 20px;
+  height: 20px;
+}
+
+.scorePlus {
+    width: 32px;
+    height: 32px;
+    background: #68A76B;
+}
+
+.scoreMoins {
+  width: 32px;
+  height: 32px;
+  margin-left: 10%;
+  background: #FF6F6F;
+}
+
+.container-button-score {
+  margin-left: 37%;
+  margin-bottom: 2%;
+
+}
+
+.brains{
+  background: url("../assets/image/brains.svg");
+  position: absolute;
+  top: 0; /* Positionne l'élément en haut */
+  right: 0; /* Positionne l'élément à droite */
+  width: 169.875px;
+  height: 169.971px;
+  transform: rotate(0.232deg);
+  flex-shrink: 0;
+  background-size: cover; /* Cela garantit que l'image couvre toute la zone */
+  background-repeat: no-repeat; /* Cela empêche l'image de se répéter */
+}
+
+.Question {
+  background: url("../assets/image/ques.png");
+  position: absolute;
+  top: 0; /* Positionne l'élément en haut */
+  right: 0; /* Positionne l'élément à droite */
+  width: 169.875px;
+}
+
+.addPlayTitle {
+	font-family: 'Koulen';
+	font-size: 24px;
+	font-weight: 400;
+  margin-top: -2%;
+}
+
+.container-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  .logo-ques {
+    transform: rotate(22.067deg); 
+    width: 11%;
+  }
+  .logo-ques1 {
+    transform: rotate(22.067deg); 
+    width: 11%;
+    position: absolute;
+    padding-top: 16%;
+    margin-left: 7%;
+  }
+
+}
+
+
