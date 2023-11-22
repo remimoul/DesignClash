@@ -106,7 +106,7 @@ transform: rotate(-9.44deg);
   }
 
 .addPlayer {
-
+margin: 0.5rem auto;
 position: absolute;
 width: 65%;
 height: 5%;
@@ -118,46 +118,47 @@ padding-left: 1rem;
 }
 
 .plusPlayer {
-
-
 box-sizing: border-box;
-
 position: absolute;
 width: 40px;
 height: 24px;
-left: calc(50% - 37px/2 - 86px);
-top: 420px;
-
 background: #FBBD0D;
 border: 2px solid #FFFFFF;
 border-radius: 20px;
-
+margin-top: 13%;
+margin-left: 8%;
 }
 
-.startGame {
-  /* Rectangle 11 */
+.plusPlayerLI {
+  box-sizing: border-box;
+  position: absolute;
+  width: 40px;
+  height: 24px;
+  background: #FBBD0D;
+  border: 2px solid #FFFFFF;
+  border-radius: 20px;
+  margin-top: 12%;
+  margin-left: -70%;
+  color: white;
+  font-weight: bolder;
+  }
 
+.startGame {
 position: absolute;
 width: 124px;
 height: 34px;
 left: calc(50% - 124px/2 + 42.5px);
-top: 463px;
-
 background: #000000;
 border-radius: 35px;
-/* start */
-
-
 font-family: 'Koulen';
 font-style: normal;
 font-weight: 400;
 font-size: 20px;
 line-height: 36px;
 letter-spacing: 0.24em;
-
 color: #FFFFFF;
-
-
+margin-top: 25%;
+margin-left: -10%;
   }
 
   .tableHome{
@@ -339,8 +340,8 @@ height: 22px;
 .brains{
   background: url("../assets/image/brains.svg");
   position: absolute;
-  top: 0; /* Positionne l'élément en haut */
-  right: 0; /* Positionne l'élément à droite */
+  top: 2%; /* Positionne l'élément en haut */
+  right: 4%; /* Positionne l'élément à droite */
   width: 169.875px;
   height: 169.971px;
   transform: rotate(0.232deg);
