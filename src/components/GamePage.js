@@ -9,7 +9,9 @@ import { Toaster, toast } from 'sonner'
 import Confetti from 'react-confetti';
 import useSound from 'use-sound';
 import yaySound from '../assets/sound/clap.mp3';
-
+import sablerank from '../assets/image/sablerank.png';
+import inconnuRank from '../assets/image/inconnu.svg';
+import objects from '../assets/image/Objects.svg';
 
 function GamePage() {
   const [players, setPlayers] = useState([]);
@@ -34,21 +36,33 @@ function GamePage() {
     
     const sortedPlayers = [...players].sort((a, b) => b.score - a.score);
     return (
-      <div>
+      <>
+      <div className='container-logo'>
+        <img className='logo-ques' src={ques} alt='star'></img>
+        <h1 className='addPlayTitle'>Design Clash</h1>
+       
+        </div>
+     
         {/* <p className='Player'>The player with the highest score is {highestScoringPlayer.name} with a score of {highestScoringPlayer.score}</p> */}
-        <h2>Player Rankings</h2>
-      
+        <img className='tableRankIMG' src={sablerank} alt='tableRank'></img>
+        <img className='inconnuRankIMG' src={inconnuRank} alt='inconnuRank'></img>
+        <img className='objectsRankIMG' src={objects} alt='objects'></img>
+       <div className='tableRanking'>
+            <span className='titleRanking'>Ranking</span>
         {sortedPlayers.map((player, index) => (
+         
           <div className='PlayerRank' key={index}> 
-          {player.name} 
+          <div className='rankName'>{player.name} </div>
           <span className='rank'>{index + 1}</span>
-      
-            {player.score}</div>
+          <div className='rankScore'> {player.score}    </div>
+            </div>
         ))}
-      
-      <button onClick={() => {setHighestScoringPlayer(null); navigate('/');}}>Play again</button>
-    
+         <button className='buttonExit' onClick={() => {setHighestScoringPlayer(null); navigate('/');}}>Exit</button>
       </div>
+     
+    
+      
+      </>
     );
   }
   
