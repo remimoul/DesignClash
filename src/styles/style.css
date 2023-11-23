@@ -9,10 +9,10 @@
 }
 
 html {
-  height: 103%;
-  border: 17px solid black;
+  /* height: 103%; */
+  /* border: 17px solid black; */
     background: #18FFC7;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
 
@@ -167,7 +167,7 @@ margin-left: -10%;
   }
 
   .thinkHome{
-    background: url("../assets/image/thinkacc.svg");
+   
     position: absolute;
     top: 0; /* Positionne l'élément en haut */
     right: 0; /* Positionne l'élément à droite */
@@ -326,6 +326,16 @@ line-height: 241.187%;
     position: absolute;
 }
 
+.tableRulesIMG {
+ 
+  transform: rotate(1.274deg);
+ left: 4%;
+ top: 6%;
+  z-index: -1;
+  position: absolute;
+}
+
+
 .inconnuRankIMG {
     width: 9rem;
     height: 9rem;
@@ -428,6 +438,12 @@ height: 22px;
   align-items: center;
 }
 
+.container-logo-rules {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
   .logo-ques {
     transform: rotate(22.067deg); 
     width: 11%;
@@ -438,6 +454,15 @@ height: 22px;
     position: absolute;
     padding-top: 16%;
     margin-left: 7%;
+  }
+
+  .rulesText {
+    font-family: 'Krub';
+    text-align: left;
+    font-size: 18px;
+    margin-left: 8%;
+    margin-right: 9%;
+    
   }
 
 
