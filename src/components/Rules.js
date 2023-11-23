@@ -7,9 +7,9 @@ import objects from '../assets/image/Objects.svg';
 function Rules(){
   const navigate = useNavigate();
     return (
-        
-      <div className='rules-border'>
-<img className='objectsRulesIMG' src={objects} alt='objects'></img>
+        <div>
+      {/* <div className='rules-border'> */}
+{/* <img className='objectsRulesIMG' src={objects} alt='objects'></img> */}
 <button className='buttonExit' onClick={()=>navigate('/')}>Back</button>
             <div className='container-logo-rules'>
       <img className='logo-ques1' src={ques} alt='star'></img>
