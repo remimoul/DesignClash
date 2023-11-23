@@ -237,7 +237,7 @@ margin-top: 25%;
   border-radius: 6px;
 border: 1px solid #000;
 background: #FFF;
-/* width: 65%; */
+width: 80%;
 margin: 14px auto;
 flex-shrink: 0;
 }
@@ -339,7 +339,7 @@ line-height: 241.187%;
 .inconnuRankIMG {
     width: 9rem;
     height: 9rem;
-    z-index: -1;
+    
     position: absolute;
     right: 0;
     top: 0;
@@ -465,6 +465,43 @@ height: 22px;
     
   }
 
+  .lvlPolice {
+   color: #FBBD0D;
+font-family: 'Krub';
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+  }
+
+  .game-border {
+    border: 5px solid black;
+    height: 100vh;
+  }
+
+  .rules-border {
+    border: 5px solid black;
+    height: 230vh;
+  }
+
+  .objectsRulesIMG{
+    position: absolute;
+  left: -4%;
+  bottom: -133%;
+  }
+
+  .RulesExit {
+    border-radius: 33px;
+  background: #000;
+  width: 85px;
+  height: 34px;
+  color: #FFF;
+  font-family: 'Koulen';
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 4.6px;
+  margin-left: 35%;
+  }
+  
 
 }
 

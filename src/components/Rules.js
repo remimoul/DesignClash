@@ -1,12 +1,16 @@
 import ques from '../assets/image/ques.png';
 import sablerank from '../assets/image/sablerank.png';
 import inconnuRank from '../assets/image/inconnu.svg';
-import { createEvent } from '@testing-library/react';
+import { useNavigate } from 'react-router-dom';
+import objects from '../assets/image/Objects.svg';
 
 function Rules(){
+  const navigate = useNavigate();
     return (
         
-        <div>
+      <div className='rules-border'>
+<img className='objectsRulesIMG' src={objects} alt='objects'></img>
+<button className='buttonExit' onClick={()=>navigate('/')}>Back</button>
             <div className='container-logo-rules'>
       <img className='logo-ques1' src={ques} alt='star'></img>
         <h1 className='addPlayerTitle'>Design Clash</h1>
@@ -52,7 +56,7 @@ For each correct answer you win 4 points in the easy level, 5 points in the medi
        
           <img className='tableRulesIMG' src={sablerank} alt='tableRank'></img>
         <img className='inconnuRankIMG' src={inconnuRank} alt='inconnuRank'></img>
-       
+        <button className='RulesExit' onClick={() => {navigate('/');}}>Exit</button>
         </div>
     
     )

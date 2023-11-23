@@ -22,6 +22,7 @@ function GamePage() {
   const [showConfetti, setShowConfetti] = useState(false);
   const navigate = useNavigate();
   const [play] = useSound(yaySound);
+  
 
   const endGame = () => {
     setGameStarted(false);
@@ -36,7 +37,7 @@ function GamePage() {
     
     const sortedPlayers = [...players].sort((a, b) => b.score - a.score);
     return (
-      <>
+      <div className='game-border'>
       <div className='container-logo'>
         <img className='logo-ques' src={ques} alt='star'></img>
         <h1 className='addPlayTitle'>Design Clash</h1>
@@ -62,25 +63,41 @@ function GamePage() {
      
     
       
-      </>
+      </div>
     );
   }
   
-  
+
+function repeat(){
+ setShowConfetti(true);
+          play();
+          setTimeout(() => setShowConfetti(false), 3500);
+}
 
   const increment = (index) => {
     
     // setPlayers(players.map((player, idx) => idx === index ? { ...player, score: player.score + 10 } : player));
     setPlayers(players.map((player, idx) => {
       if (idx === index) {
-        const newScore = player.score + 10;
-        if (newScore >= 100) {
-          setMessage(toast(`Player ${player.name} has reached 100 points!`));
-          setShowConfetti(true);
-          play();
-          setTimeout(() => setShowConfetti(false), 2500); // Disparaît après 2 secondes
+        // const newScore = player.score + 10;
+        //let incrementValue = player.score >= 100 ? 20 : 10;
+        let incrementValue;
+        if (player.score < 20) {
+          incrementValue = 4;
+        } else if (player.score < 50) {
+          incrementValue = 5;
+        } else {
+          incrementValue = 10;
         }
-        return { ...player, score: newScore };
+        const newScore = player.score + incrementValue;
+        if (newScore === 100) {
+          setMessage(toast(`Player ${player.name} has reached 100 points!`));
+         repeat();
+        } else if (newScore === 200) {
+          setMessage(toast(`Player ${player.name} has reached 200 points!`));
+          repeat();
+        }
+        return { ...player, score: newScore};
       }
       return player;
     }));
@@ -103,7 +120,9 @@ function GamePage() {
 
   if (gameStarted) {
     return (
-      <div>
+      <div className='game-border'>
+       <img className='objectsRankIMG' src={objects} alt='objects'></img>
+        <img className='inconnuRankIMG' src={inconnuRank} alt='inconnuRank'></img>
         {showConfetti && <Confetti />}
         <div className='container-logo'>
         <img className='logo-ques' src={ques} alt='star'></img>
@@ -114,13 +133,17 @@ function GamePage() {
             <div className='namePlayerInput'>{player.name}</div>
           <p className='scorePlayer'>Score: {player.score} <img className='star' src={star} alt='star'></img> </p>
           <div className='container-button-score'>
+          <p> {
+      player.score < 20 ? <div className='lvlPolice'>Easy</div> :
+      player.score < 50 ? <div className='lvlPolice'>Medium</div> : <div className='lvlPolice'>Hard</div>
+    }</p>
           <button className='scorePlus' onClick={()=> increment(index)}><img src={check} alt='check'></img></button>
           <button className='scoreMoins' onClick={()=> decrement(index)}><img src={letterx} alt='x'></img></button>
           </div>
           </div>
         ))}
       {message && <Toaster richColors closeButton position="top-center" />}
-        <button onClick={endGame}>End game</button>
+        <button className='buttonExit' onClick={endGame}>END</button>
       </div>
     );
   }
@@ -131,7 +154,9 @@ function GamePage() {
 
   console.log(players);
   return (
-    <div>
+    <div className='game-border'>
+    <button className='buttonExit' onClick={()=>navigate('/')}>Back</button>
+   
       <div className='container-logo'>
       <img className='logo-ques1' src={ques} alt='star'></img>
         <h1 className='addPlayerTitle'>Design Clash</h1>
