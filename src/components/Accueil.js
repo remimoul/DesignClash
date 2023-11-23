@@ -8,9 +8,11 @@ import {Link} from 'react-router-dom';
 
 return (
   <>
+ 
+    <div className='button-container'>
   <h1 className="TitleGame">Design Clash</h1>
 
-  <div className='button-container'>
+
   <Link to="/GamePage">
   <button className='buttonStart'as="a" variant="success" color="success">START</button>
   </Link>

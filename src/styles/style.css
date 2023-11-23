@@ -14,18 +14,14 @@ html {
     background: #18FFC7;
     overflow: hidden;
   }
+
+
   
 
   /* Style pour les écrans de taille moyenne (tablette) */
 @media only screen and (max-width: 768px) {
     
   .TitleGame {
-
-position: absolute;
-width: 197px;
-height: 112px;
-left: 94px;
-top: 283px;
 
 font-family: 'Koulen';
 font-style: normal;
@@ -34,25 +30,33 @@ font-size: 36px;
 line-height: 87px;
 
 color: #000000;
-
+margin-bottom: -5%;
 
   }
 
   .button-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      width: 100px;
-      height: 175px;
-      left: 130px;
-      top: 306px;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80%;
   }
 
+  /* .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100px;
+    height: 175px;
+    left: 130px;
+    top: 306px;
+  
+} */
+
   .buttonStart {
-    margin-top: 15px; /* Cela ajoute une marge de 10px en haut et en bas de chaque bouton */
+    
     width: 181px;
     height: 43px;
     background: #000000;
@@ -64,45 +68,34 @@ font-size: 32px;
 line-height: 44px;
 letter-spacing: 0.24em;
 color: #FFFFFF;
+margin-bottom: 7%;
   }
 
 
 .buttonClass {
-
-
 box-sizing: border-box;
-
-position: absolute;
 width: 129px;
 height: 31px;
-
-top:125px;
-
 background: #FFFFFF;
 border: 2px solid #FBBD0D;
 border-radius: 33px;
-transform: rotate(-9.7deg);
-
+transform: rotate(-10.44deg);
+margin-left: 55%;
 }
 
 
 
 
   .buttonRules {
-    /* Rectangle 8 */
-
 box-sizing: border-box;
-
-position: absolute;
-width: 109.87px;
+width: 129px;
 height: 31px;
-top: 163px;
-
 background: #FFFFFF;
 border: 2px solid #FBBD0D;
 border-radius: 33px;
-transform: rotate(-9.44deg);
-
+transform: rotate(-10.44deg);
+margin-left: 50%;
+margin-top: 8%;
   }
 
 .addPlayer {
@@ -382,6 +375,7 @@ height: 22px;
     padding-top: 16%;
     margin-left: 7%;
   }
+
 
 }
 
